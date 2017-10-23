@@ -2,14 +2,22 @@
 <html>
 	<head>
 		<title>Anti-Alias Image</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="lib/lib.css">
 		<script src="lib/lib.js"></script>
+		<script src="StackBlur.js"></script>
 		<script src="main.js"></script>
 	</head>
 
 	<body>
-		<button id="fileInput" class="blue">Load Image</button>
-		<canvas id="canvas">
-		<button id="download">Download</button>
+	    <header>Anti-Alias Image</header>
+	    <div id="centerbody">
+    		<button id="fileInput" class="blue" onclick="uploadFile()">Load Image</button>
+    		<canvas id="canvas" class="hidden"></canvas>
+    		<canvas id="dispCanvas">Upgrade your browser to see the preview. It requires Canvas HTML5 Element.</canvas>
+    		<button id="download" class="green">Download</button>
+		</div>
+		<input type="file" id="hiddenFile" onchange="imageUploaded(event)" accept="image/*">
 	</body>
 </html>
+    
